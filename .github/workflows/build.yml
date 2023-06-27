@@ -43,9 +43,9 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           script: |
-            cd ~/work
+            cd ~/work/cicd-github-action-workflow
             git checkout .
             git pull
             npm run build
             npm i -g serve
-            pm2 restart MyApp
+            serve -s build
