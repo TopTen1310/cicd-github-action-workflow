@@ -55,4 +55,5 @@ jobs:
             git pull
             npm ci
             npm run build
+            chmod +x start.sh
             pm2 start ecosystem.config.js

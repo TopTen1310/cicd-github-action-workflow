@@ -1,9 +1,7 @@
 module.exports = {
   apps : [{
     name: 'my-app',
-    script: 'serve',
-    args: '-s build -l 3000', // here you can set options like the port number
-    interpreter: 'none',
+    script: './start.sh',
     instances: 'max',
     autorestart: true,
     watch: false,
