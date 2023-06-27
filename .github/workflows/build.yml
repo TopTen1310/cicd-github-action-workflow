@@ -49,10 +49,10 @@ jobs:
           script: |
             sudo apt-get update
             sudo apt-get install -y nodejs npm
+            sudo npm install -g pm2
             cd ~/work/cicd-github-action-workflow
             git checkout .
             git pull
             npm ci
             npm run build
-            npm i -g serve
-            serve -s build
+            pm2 start ecosystem.config.js
